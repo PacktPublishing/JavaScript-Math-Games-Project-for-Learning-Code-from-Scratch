@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head><title>JavaScript Code Examples</title>
+    </head>
+    <body>
+        <div class="game">Hello</div>
+        <script>
+            const gameArea = document.querySelector('.game');
+            console.log(gameArea);
+            gameArea.textContent = "hello world";
+            gameArea.style.backgroundColor = 'red';
+            gameArea.val = "Hidden";
+            console.log(gameArea);
+            gameArea.addEventListener('click',(e)=>{
+                console.log(e);
+                if(e.target.style.backgroundColor == 'red'){
+                    e.target.style.backgroundColor = 'green';
+                }else{
+                    e.target.style.backgroundColor = 'red';  
+                }
+            })
+        </script>
+    </body>
+</html>

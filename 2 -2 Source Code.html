@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head><title>JavaScript Code Examples</title>
+        <style>
+            .box{
+                padding: 10px;
+                font-size: 3em;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="game">Hello</div>
+        <script>
+           const gameArea = document.querySelectorAll('.game')[0];
+            const output = document.createElement('div');
+            output.textContent = "hello world";
+            output.val = 0;
+            output.classList.add('box');
+            output.addEventListener('click',(e)=>{
+                output.val++;
+                output.textContent = output.val;
+                let temp = output.val % 2 ? 'red' : 'blue';
+                output.style.backgroundColor = temp;
+            })
+            gameArea.append(output);
+            document.body.prepend(output);
+            let val = gameArea.appendChild(output);
+            console.log(val);
+
+            console.log(output);
+        </script>
+    </body>
+</html>

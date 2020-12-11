@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head><title>JavaScript Code Examples</title>
+
+    </head>
+    <body>
+        <div class="game">Hello</div>
+        <script>
+           const gameArea = document.querySelector('.game');
+           const btn = document.createElement('button')
+           const game = {max:10,arr:['b','c','d','a','q']}
+           console.log(game);
+           gameArea.appendChild(btn);
+           btn.textContent = 'start game';
+           btn.addEventListener('click',startGame);
+
+           function startGame(){
+           for(let i=0;i<game.max;i++){
+               const div = document.createElement('div');
+                game.arr.sort(()=>{ return 0.5 - Math.random()});
+                div.textContent =  game.arr.join(' ');
+                gameArea.append(div);
+           }
+        }
+        </script>
+    </body>
+</html>
